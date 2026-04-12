@@ -1,0 +1,210 @@
+/* Form Container & General Styles */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+/* Login & Register Form */
+.auth-form {
+  width: 100%;
+  max-width: 450px;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 2rem;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+div {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+input::placeholder {
+  color: #999;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Error Messages */
+span {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+p {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+p a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Hotel Cards Grid */
+.hotels-container {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.hotels-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hotels-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.hotels-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+.hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Booking Form Container */
+.booking-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.booking-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.booking-form-grid.full {
+  grid-column: 1 / -1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-form {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .booking-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotels-header h1 {
+    font-size: 2rem;
+  }
+}

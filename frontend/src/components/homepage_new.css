@@ -1,0 +1,90 @@
+/* Homepage - Compact Airbnb Style */
+.homepage{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:80px 0 100px;text-align:center}
+.hero-content{width:100%;padding:0 20px}
+.hero h1{font-size:3.5rem;font-weight:700;margin-bottom:1rem;text-shadow:0 2px 4px rgba(0,0,0,.3)}
+.hero p{font-size:1.3rem;margin:0 0 3rem;opacity:.9;max-width:600px;margin-left:auto;margin-right:auto}
+
+/* Search */
+.search-form{background:#fff;border-radius:12px;padding:2rem;box-shadow:0 10px 30px rgba(0,0,0,.2);width:100%;width:calc(100% - 4rem);margin:0 2rem}
+.search-group{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:1rem;align-items:end}
+.search-field{display:flex;flex-direction:column;text-align:left}
+.search-field label{font-weight:600;margin-bottom:.5rem;color:#333;font-size:.9rem}
+.search-field input,.search-field select{padding:.75rem;border:2px solid #e1e5e9;border-radius:8px;font-size:1rem;transition:all .3s}
+.search-field input:focus,.search-field select:focus{outline:none;border-color:#667eea;box-shadow:0 0 0 3px rgba(102,126,234,.1)}
+.search-btn{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;padding:.75rem 1.5rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:all .3s;white-space:nowrap}
+.search-btn:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(102,126,234,.4)}
+
+/* Container */
+.container{width:100%;padding:0 20px}
+
+/* Sections */
+.featured-section,.destinations-section,.why-choose-section{padding:80px 0}
+.featured-section h2,.destinations-section h2,.why-choose-section h2{font-size:2.5rem;text-align:center;margin-bottom:1rem;color:#333}
+.featured-section p,.destinations-section p{text-align:center;font-size:1.1rem;color:#666;margin-bottom:3rem}
+
+/* Cards */
+.hotels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem}
+.destinations-grid,.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem}
+.hotel-card,.destination-card,.feature-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,.1);transition:all .3s}
+.hotel-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.15)}
+.destination-card:hover,.feature-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+.destination-card{cursor:pointer}
+.feature-card{text-align:center;padding:2rem}
+
+/* Images */
+.hotel-image{background:linear-gradient(135deg,#f093fb,#f5576c);height:200px;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.destination-image{background:linear-gradient(135deg,#667eea,#764ba2);height:150px;display:flex;align-items:center;justify-content:center;font-size:3rem}
+
+/* Info */
+.hotel-info,.destination-info{padding:1rem}
+.hotel-info h3,.destination-info h3{font-size:1.2rem;margin-bottom:.5rem;color:#333}
+.hotel-info h3{font-size:1.3rem}
+.location,.destination-info p,.feature-card p{color:#666}
+.location{margin-bottom:.5rem;font-size:.9rem}
+.rating{display:flex;align-items:center;margin-bottom:1rem;font-weight:600;color:#f39c12}
+.reviews{color:#666;font-weight:400;margin-left:.5rem}
+.amenities{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.amenity-tag{background:#f8f9fa;color:#666;padding:.25rem .5rem;border-radius:4px;font-size:.8rem;font-weight:500}
+.price-section{display:flex;justify-content:space-between;align-items:center}
+.price{font-size:1.2rem;font-weight:700;color:#667eea}
+.book-btn{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;padding:.5rem 1rem;border-radius:6px;font-weight:600;cursor:pointer;transition:all .3s}
+.book-btn:hover{transform:translateY(-2px);box-shadow:0 3px 10px rgba(102,126,234,.3)}
+
+/* Why Choose Us */
+.why-choose-section{background:#f8f9fa}
+.why-choose-section h2{margin-bottom:3rem}
+.feature-icon{font-size:3rem;margin-bottom:1rem}
+.feature-card h3{margin-bottom:1rem}
+.feature-card p{line-height:1.6}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:80px 0;text-align:center}
+.cta-section h2{font-size:2.5rem;margin-bottom:1rem}
+.cta-section p{font-size:1.2rem;margin-bottom:2rem;opacity:.9}
+.cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.cta-primary,.cta-secondary{padding:1rem 2rem;border-radius:8px;font-size:1.1rem;font-weight:600;cursor:pointer;transition:all .3s;border:2px solid transparent}
+.cta-primary{background:#fff;color:#667eea}
+.cta-primary:hover{background:transparent;color:#fff;border-color:#fff}
+.cta-secondary{background:transparent;color:#fff;border-color:#fff}
+.cta-secondary:hover{background:#fff;color:#667eea}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1{font-size:2.5rem}
+  .hero p{font-size:1.1rem}
+  .search-group{grid-template-columns:1fr;gap:1rem}
+  .search-btn{width:100%}
+  .hotels-grid,.destinations-grid,.features-grid{grid-template-columns:1fr}
+  .featured-section h2,.destinations-section h2,.why-choose-section h2,.cta-section h2{font-size:2rem}
+  .cta-buttons{flex-direction:column;align-items:center}
+  .cta-primary,.cta-secondary{width:200px}
+}
+@media(max-width:480px){
+  .hero{padding:60px 0 80px}
+  .search-form{padding:1.5rem}
+  .hero h1{font-size:2rem}
+  .hotel-image,.destination-image{height:120px;font-size:2.5rem}
+}
