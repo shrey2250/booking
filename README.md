@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hotel Booking Full-Stack Application
 
 A full-stack hotel booking application built with React, Vite, Express, MongoDB, and JWT authentication.
@@ -136,3 +137,6 @@ Add your deployed app link here once live:
 ## Contact
 
 If you need help with deployment or repository setup, update this README or ask for assistance.
+=======
+# hotel-booking
+>>>>>>> 838e86356434a4867d96b6f17aec6b0b59e0dc51
