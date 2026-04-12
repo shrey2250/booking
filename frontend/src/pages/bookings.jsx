@@ -5,6 +5,7 @@ import './bookings.css';
 import BookingForm from './BookingForm.jsx';
 import ImageGallery from '../components/ImageGallery';
 import { getAuthSnapshot } from '../utils/auth';
+import { buildApiUrl } from '../api/config';
 
 function Bookings() {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ function Bookings() {
     // Fetch available locations
     const fetchLocations = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/hotels');
+        const response = await fetch(buildApiUrl('/hotels'));
         const hotels = await response.json();
         const uniqueLocations = [...new Set(hotels.map(h => h.location))];
         setLocations(uniqueLocations);
@@ -59,7 +60,7 @@ function Bookings() {
 
     setLoadingBookings(true);
     try {
-      const response = await fetch('http://localhost:5000/api/bookings', {
+      const response = await fetch(buildApiUrl('/bookings'), {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -113,7 +114,7 @@ function Bookings() {
     // Fetch hotel by destination
     let hotel;
     try {
-      const response = await fetch(`http://localhost:5000/api/hotels?location=${encodeURIComponent(bookingData.destination)}`);
+      const response = await fetch(buildApiUrl(`/hotels?location=${encodeURIComponent(bookingData.destination)}`));
       
       if (!response.ok) {
         setErrors({ destination: "Failed to fetch hotels" });
@@ -201,7 +202,7 @@ function Bookings() {
       console.log("Token length:", token.length);
       console.log("Token preview:", token.substring(0, 50) + "...");
 
-      const res = await fetch("http://localhost:5000/api/bookings", {
+      const res = await fetch(buildApiUrl('/bookings'), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

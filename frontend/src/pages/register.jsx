@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../components/form.css';
+import { buildApiUrl } from '../api/config';
 
 function Register() {
   const [fullName, setFullName] = useState("");
@@ -45,7 +46,7 @@ function Register() {
     setServerError("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/register", {
+      const res = await fetch(buildApiUrl('/auth/register'), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
