@@ -20,7 +20,7 @@ cp .env.example .env
 ```
 
 **Environment Variables:**
-- `MONGODB_URI` - MongoDB connection string (default: mongodb://localhost:27017/hotel-booking)
+- `MONGODB_URI` or `MONGO_URI` - MongoDB connection string (default: mongodb://localhost:27017/hotel-booking)
 - `JWT_SECRET` - JWT secret key for authentication
 - `PORT` - Server port (default: 5000)
 - `NODE_ENV` - Environment (development/production)
