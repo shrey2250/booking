@@ -1,16 +1,111 @@
-# React + Vite
+# 🏨 Hotel Booking System (MERN)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack hotel booking web application with authentication, role-based access, and admin dashboard.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### 🔐 Authentication & Security
+- JWT-based authentication
+- Password hashing using bcrypt
+- Role-based access control (Admin/User)
+- Protected routes (frontend + backend)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 👤 User Features
+- Register & Login
+- Browse hotels
+- Book hotels
+- View booking summary
 
-## Expanding the ESLint configuration
+### 🛠️ Admin Features
+- Admin login panel
+- Manage users
+- Manage hotels
+- View bookings
+- Analytics dashboard
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Tech Stack
+
+### Frontend
+- React.js (Vite)
+- React Router DOM
+- CSS
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+
+---
+
+## 📂 Project Structure
+hotel-booking/
+│
+├── backend/ # API & server
+├── frontend/ # React app
+├── .gitignore
+└── README.md
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone Repository
+git clone https://github.com/YOUR_USERNAME/hotel-booking.git
+
+cd hotel-booking
+
+---
+
+### 2️⃣ Backend Setup
+cd backend
+npm install
+npm start
+
+---
+
+### 3️⃣ Frontend Setup
+cd frontend
+npm install
+npm run dev
+
+---
+
+## 🌐 Environment Variables
+
+Create `.env` file in backend:
+MONGO_URI=your_mongodb_url
+JWT_SECRET=your_secret_key
+PORT=5000
+
+---
+
+## 🔐 API Authentication
+
+- Token stored in localStorage
+- Used for protected routes
+- Admin routes require role = "admin"
+
+---
+
+## 📸 Screenshots
+
+(Add your screenshots here before submission)
+
+---
+
+## 👨‍💻 Author
+
+- Shrey Kariya
+
+---
+
+## 📌 Notes
+
+- Admin panel is hidden from UI for security
+- Access via: `/admin/login`
